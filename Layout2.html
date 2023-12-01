@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ultra Edit Webpage</title>
+    <style>
+      *{
+        margin: 0px;
+        padding: 0px;
+      }
+      
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-content: center;
+      }
+      .mainmenu ul {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 40px;
+      }
+      ul li {
+        list-style-type: none;
+        text-decoration: none;
+      }
+      main {
+        margin-top: 20px;
+        padding: 30px;
+      }
+      .Upper-Container {
+        font-size: 50px;
+        margin-top: 10px;
+        text-align: center;
+      }
+      .middle-container {
+        margin-top: 10px;
+        font-size: 30px;
+        white-space: pre;
+        text-align: center;
+      }
+      .button button {
+        border: none;
+        background-color: #00b6d1;
+        border-radius: 5px;
+        color: rgb(255, 255, 255);
+        font-weight: bolder;
+        width: 20vw;
+        height: 5vh;
+        text-align: center;
+      }
+      .button {
+        margin-top: 4px;
+        text-align: center;
+      }
+
+      .Upper-Container span {
+        font-weight: 700;
+      }
+
+      .Section-1 {
+        margin-top: 12px;
+        display: flex;
+        justify-content: center;
+        align-content: center;
+      }
+      .Section-1 img {
+        width: 59px;
+        height: 59px;
+        padding-right: 51px;
+      }
+      .Section-1 div {
+        padding-top: 17px;
+        padding-left: 9px;
+        font-size: 23px;
+      }
+      .Section-1 div span {
+        font-size: 13px;
+      }
+      .second {
+        margin-top: 47px;
+        display: flex;
+        gap: 20px;
+        justify-content: center;
+        align-content: center;
+        margin-right: 400px;
+      }
+      .second .description {
+        margin-top: 10px;
+        font-size: 24px;
+      }
+      .second .description span {
+        font-size: 15px;
+      }
+      .third {
+        margin-top: 12px;
+        margin-left: 222px;
+        padding: 40px;
+      }
+      .container1 {
+        display: grid;
+        grid-template-rows: 200px;
+        grid-template-columns: 250px 250px 250px;
+        gap: 60px;
+      }
+      .English {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+        background-color: #0000000f;
+      }
+      .German {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+        background-color: #0000000f;
+      }
+      .Italian {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+        background-color: #0000000f;
+      }
+      .container2 {
+        display: grid;
+        grid-template-rows: 200px;
+        grid-template-columns: 250px 250px 250px;
+        gap: 60px;
+        margin-top: 28px;
+      }
+      .spain {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+        background-color: #0000000f;
+      }
+      .France {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+        background-color: #0000000f;
+      }
+      .brazil {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+        background-color: #0000000f;
+      }
+      .container3 {
+        display: grid;
+        grid-template-rows: 200px;
+        grid-template-columns: 250px 250px 250px;
+        gap: 60px;
+        margin-top: 28px;
+      }
+      .Japan {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+        background-color: #0000000f;
+      }
+      .Korea {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+        background-color: #0000000f;
+      }
+      .China {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+        background-color: #0000000f;
+      }
+      .container4 {
+        display: grid;
+        grid-template-rows: 200px;
+        grid-template-columns: 250px 250px 250px;
+        gap: 60px;
+        margin-top: 28px;
+      }
+      .TraditionalChina {
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        align-items: center;
+        background-color: #0000000f;
+      }
+      .third span {
+        font-weight: 700;
+        font-size: 21px;
+      }
+      .third .button2 {
+        margin-top: 50px;
+        padding: 10px;
+      }
+      .third .button3 {
+        margin-top: 95px;
+      }
+      .button3 button {
+        padding: 7px;
+      }
+      .third {
+        font-size: small;
+      }
+      .button2 button {
+        padding: 7px;
+      }
+      .button3 .blue-button {
+        border: none;
+        background-color: #00b6d1;
+        border-radius: 5px;
+        font-weight: bold;
+        color: white;
+      }
+      .button3 .green-button {
+        border: none;
+        background-color: #5cb85c;
+        border-radius: 5px;
+        font-weight: bold;
+        color: white;
+      }
+      .button2 .blue-button {
+        border: none;
+        background-color: #00b6d1;
+        border-radius: 5px;
+        font-weight: bold;
+        color: white;
+      }
+      .button2 .green-button {
+        border: none;
+        background-color: #5cb85c;
+        border-radius: 5px;
+        font-weight: bold;
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo-container">
+          <img
+            src="Icon-Image.png"
+            alt="This is the main icon"
+            height="60px
+          "
+            width="180px"
+          />
+        </div>
+        <div class="mainmenu">
+          <ul>
+            <li>
+              Products
+              <img src="Downard-Arrow.png" alt="" height="10px" width="15px" />
+            </li>
+            <li>
+              Pricing
+              <img src="Downard-Arrow.png" alt="" height="10px" width="15px" />
+            </li>
+            <li>
+              Resources<img
+                src="Downard-Arrow.png"
+                alt=""
+                height="10px"
+                width="15px"
+              />
+            </li>
+            <li>
+              About us
+              <img src="Downard-Arrow.png" alt="" height="10px" width="15px" />
+            </li>
+            <li>
+              <img
+                src="English-Language.png"
+                alt=""
+                height="35px"
+                width="40px"
+              />
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <section class="FIRST">
+        <div class="Upper-Container">
+          Download <span>UltraEdit </span>for Windows
+          <img src="UltraEdit.png" alt="" />
+        </div>
+        <div class="middle-container">
+          Download and try UltraEdit before you buy it! This Download includes
+          the full Windows version of the text editor.
+        </div>
+        <div class="button">
+          <button>DOWNLOAD MAC OR LINUX VERSION</button>
+        </div>
+      </section>
+      <!--This is the second section-->
+      <section class="second">
+        <div class="image">
+          <img
+            src="Icon2.png"
+            alt="This is an Icon"
+            width="55px"
+            height="55px"
+          />
+        </div>
+        <div class="description">
+          Download UltraEdit <span>v2023.1(released 08/16/2023) | Hotfix</span>
+        </div>
+      </section>
+      <!--This is the third section-->
+      <section class="third">
+        <!--This is the first Contaner-->
+        <div class="container1">
+          <div class="English">
+            <span>English</span>
+            <div class="button3">
+              <button class="blue-button">Download 32bit</button>
+              <button class="green-button">Download 64bit</button>
+            </div>
+          </div>
+          <div class="German">
+            <span> Deutsch </span> German
+            <div class="button2">
+              <button class="blue-button">Download 32bit</button>
+              <button class="green-button">Download 64bit</button>
+            </div>
+          </div>
+          <div class="Italian">
+            <span> Italiano</span> Italian
+            <div class="button2">
+              <button class="blue-button">Download 32bit</button>
+              <button class="green-button">Download 64bit</button>
+            </div>
+          </div>
+        </div>
+        <!--This is the second container-->
+        <div class="container2">
+          <div class="spain">
+            <span> Español </span> Spanish
+            <div class="button2">
+              <button class="blue-button">Download 32bit</button>
+              <button class="green-button">Download 64bit</button>
+            </div>
+          </div>
+          <div class="France">
+            <span>français </span> French
+            <div class="button2">
+              <button class="blue-button">Download 32bit</button>
+              <button class="green-button">Download 64bit</button>
+            </div>
+          </div>
+          <div class="brazil">
+            <span> Português brasileiro </span> Brazilian Portuguese
+            <div class="button2">
+              <button class="blue-button">Download 32bit</button>
+              <button class="green-button">Download 64bit</button>
+            </div>
+          </div>
+        </div>
+        <!--This is the third container-->
+        <div class="container3">
+          <div class="Japan">
+            <span> 日本 </span> Japanese
+            <div class="button2">
+              <button class="blue-button">Download 32bit</button>
+              <button class="green-button">Download 64bit</button>
+            </div>
+          </div>
+          <div class="Korea">
+            <span>한국어 </span>Korean
+            <div class="button2">
+              <button class="blue-button">Download 32bit</button>
+              <button class="green-button">Download 64bit</button>
+            </div>
+          </div>
+          <div class="China">
+            <span> 中国 </span> Chinese
+            <div class="button2">
+              <button class="blue-button">Download 32bit</button>
+              <button class="green-button">Download 64bit</button>
+            </div>
+          </div>
+        </div>
+        <!--This is the fourth Container-->
+        <div class="container4">
+          <div class="TraditionalChina">
+            <span> 中國 Traditional </span> Chinese
+            <div class="button2">
+              <button class="blue-button">Download 32bit</button>
+              <button class="green-button">Download 64bit</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
